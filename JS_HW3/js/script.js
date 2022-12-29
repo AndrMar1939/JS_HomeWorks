@@ -207,11 +207,6 @@ Object.defineProperty(employeeObj, 'fullInfo', {
 
 console.log(employeeObj.fullInfo);
 
-
-Object.defineProperty(employeeObj, 'fullInfoSet', {
-    
-})
-
 employeeObj.fullInfo = {name: 'Вася', salary: 9000, email: 'ex@mail.ua'};
 
 console.log(employeeObj);
