@@ -32,7 +32,7 @@ const studentArr = [{
         name: 'Денис',
         surname: 'Хрущ',
         ratingPoint: 1000,
-        schoolPoint: 9290,
+        schoolPoint: 920,
         course: 4,
     },
     {
@@ -108,19 +108,11 @@ class Student {
             Student.studentsArr.sort(function (a, b) {return b.ratingPoint - a.ratingPoint});
 
             console.log(Student.studentsArr);
-
-            // for (let ch of Student.studentsArr) {
-            //     if (this.ratingPoint = ch.ratingPoint && this.schoolPoint < ch.schoolPoint) {
-            //         Student.studentsArr.pop();
-            //         this.isSelfPayment = true; 
-            //     } else 
-            //     }
-
+                         
             if (Student.studentsArr.indexOf(this) === 5) {
                 Student.studentsArr.pop();
                 this.isSelfPayment = true;               
-            } 
-            else {
+            }  else {
                 Student.studentsArr[5].isSelfPayment = true;
                 this.isSelfPayment = false;
                 Student.studentsArr.pop(); 
@@ -133,10 +125,7 @@ class Student {
 
     static studentsArr = [];
 
-    static defineSelfPayment () {
-
-    }
-
+    
     // getter listOfStudents
     static get listOfStudents () {
         return Student.studentsArr;
@@ -145,9 +134,6 @@ class Student {
 
 }
 
-console.log(studentArr);
-
-console.log(Student.listOfStudents);
 
 let stud = new Student(studentArr[0]);
 let stud1 = new Student(studentArr[1]);
@@ -177,39 +163,44 @@ console.log(stud10.isSelfPayment);
 
 // ______________________________________________________________________________________________________________________exercise 2
 
-// class CustomString {
-//     constructor() {}
+class CustomString {
+    constructor() {}
 
-//     reverse(str) {
-//         let result = '';
-//         for (let i = str.length-1; i >=0; i--) {
-//             result += str[i];
-//         }
-//         return result;
-//     }  
+    reverse(str) {
+        let result = '';
+        for (let i = str.length-1; i >=0; i--) {
+            result += str[i];
+        }
+        return result;
+    }  
 
-//     ucFirst(str) {
-//         let result = str[0].toUpperCase() + str.slice(1);      
-//         return result;
-//     }
+    ucFirst(str) {
+        let result = str[0].toUpperCase() + str.slice(1);      
+        return result;
+    }
 
-//     ucWords(str) {
-//         let innerArr = str.split(" ");
-//         let result = [];
+    ucWords(str) {
+        let innerArr = str.split(" ");
+        let result = [];
 
-//         for (let ch of innerArr) {
-//             let innerStr = ch[0].toUpperCase() + ch.slice(1); 
-//             result.push(innerStr);
-//         }
-//         return result.join(' ')
-//     }
+        for (let ch of innerArr) {
+            let innerStr = ch[0].toUpperCase() + ch.slice(1); 
+            result.push(innerStr);
+        }
+        return result.join(' ')
+    }
     
-// }
+}
 
-// const myString = new CustomString();
+const myString = new CustomString();
 
-// console.log(myString.reverse('qwerty'));
-// console.log(myString.ucFirst('qwerty'));
-// console.log(myString.ucWords('qwerty qwerty qwerty'));
+console.log(myString.reverse('qwerty'));
+console.log(myString.ucFirst('qwerty'));
+console.log(myString.ucWords('qwerty qwerty qwerty'));
 
 // ______________________________________________________________________________________________________________________exercise 3
+// class Validator {
+//     checkIsEmail(str) {
+
+//     }
+// }
