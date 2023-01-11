@@ -55,3 +55,32 @@ let getTime = foo();
 
 // ____________________________exercise 4
 
+function timeCounter (timeInSeconds) {
+
+    const intervalID = setInterval(() => {
+
+        if (timeInSeconds === 0) {
+            console.log('Time End');
+            clearInterval(intervalID);
+            return
+        }     
+        
+        let minutes = Math.floor(timeInSeconds / 60);
+        let seconds = timeInSeconds % 60;
+
+            
+        let min = minutes.toString();
+        let sec = seconds.toString();
+
+        --timeInSeconds;
+
+        console.log(`${min.padStart(2, '0')}:${sec.padStart(2, '0')}`)
+               
+    
+    }, 1000)
+}
+
+
+// timeCounter(417)
+
+
