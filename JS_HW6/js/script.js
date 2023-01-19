@@ -130,7 +130,7 @@ function customJoin(arr, separator) {
     let result = '';
 
     arr.forEach(function (element, index) {
-        index === arr.length-1 ? result += element : result+= element + separator;
+        index === arr.length-1 || separator === undefined ? result += element : result+= element + separator;
     })
 
     return arr.length === 0 ? 'there is an empty array' : result;
@@ -149,7 +149,7 @@ function customReduce(arr, initialVal) {
     if (!!initialVal === true) {
         result+= initialVal;
     }
- 
+    
     arr.forEach(element => result+=element)
 
     return result;
