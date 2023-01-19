@@ -66,17 +66,15 @@ const candidate2 = new Candidate(candidateArr[50]);
 
 // __________________________________________________exercise_6___
 
-function getCompanyNames(arr) {
-    let result = [];
-
-    candidateArr.forEach(element => {
-        result.push(element['company'])
+function getCompanyNames() {
+    let innerArr = candidateArr.map(element => {
+       return element['company'];
     });
 
-    return Array.from(new Set(result));
+    return Array.from(new Set(innerArr));
 }
 
-// console.log(getCompanyNames(candidateArr));
+// console.log(getCompanyNames());
 
 // __________________________________________________exercise_7___
 
